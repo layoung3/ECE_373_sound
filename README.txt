@@ -9,3 +9,8 @@ PC 2  GND  PC 3
 
 PC2 = Quad_A_PC2_Pin
 PC3 = Quad_B_PC3_Pin
+
+DAC1 OUT 2
+Channel 2
+
+TIM17 Active

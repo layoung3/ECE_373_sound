@@ -18,6 +18,11 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "../Repo/KnobFSM.h"
+#include "../Repo/Sample_clock.h"
+#include "../Repo/Pitch_Adjust.h"
+#include "../Repo/Sean_queue.h"
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -120,6 +125,9 @@ int main(void)
 	  //pitch.update();
 
 	  for(number = 0; number<123456; number++){
+		  HAL_DAC_SetValue(&hdac1,DAC_CHANNEL_2,DAC_ALIGN_12B_L,number);
+	  }
+	  for(number=0; number>0; number--){
 		  HAL_DAC_SetValue(&hdac1,DAC_CHANNEL_2,DAC_ALIGN_12B_L,number);
 	  }
 

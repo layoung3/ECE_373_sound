@@ -43,10 +43,10 @@ void Knob_FSM::update(void){
 		// opens first (thus rising), and the B opens & rises while A is still
 		// high.
 		if ((A_edge == EDGE_NONE_STDY_1)&&(B_edge == EDGE_RISING)){
-			result->enqueue(KNOB_CW);
+			result->enqueue(Increase);
 		}
 		else if ((A_edge ==  EDGE_NONE_STDY_1) && (B_edge == EDGE_FALLING)){
-			result->enqueue(KNOB_CCW);
+			result->enqueue(Decrease);
 		}
 	}
 	else {} // ABORT

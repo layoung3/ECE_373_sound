@@ -10,7 +10,7 @@
 
 #include <cstdint>
 
-const uint16_t QUEUE_CAPACITY = 10;
+const uint16_t QUEUE_CAPACITY = 8;
 typedef enum {S_QUEUE_EMPTY, S_QUEUE_FULL, S_QUEUE_ACTIVE} S_queue_status_codes;
 
 class Sean_queue {

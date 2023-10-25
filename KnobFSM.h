@@ -11,7 +11,7 @@
 #include "Edgedetector.h"
 #include "Sean_queue.h"
 
-enum {KNOB_STEADY, KNOB_CW, KNOB_CCW};  // I do not think that I'll need STEADY, but it's here just-in-case.
+enum {KNOB_STEADY, Increase, Decrease};  // I do not think that I'll need STEADY, but it's here just-in-case.
 
 class Knob_FSM {
 

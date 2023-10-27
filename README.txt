@@ -1,8 +1,6 @@
-This program is meant to send out a sound pitch when a button is pressed. There will be two buttons
-one will transmit a square wave and the other will transmit a sinusoidal wave.
-A quadknob will control the pitch of the note.
-
-
+This program is meant to send out a note when a button is pressed.
+A quadknob will control the current octave of the notes.
+DAC is linked to PA5 which has a built in LED.
 
 Knob1
 PC 2  GND  PC 3

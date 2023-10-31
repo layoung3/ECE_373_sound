@@ -29,3 +29,4 @@ public:
 };
 
 #endif /* SRC_EDGEDETECTOR_H_ */
+

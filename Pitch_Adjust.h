@@ -11,14 +11,24 @@
 #include "KnobFSM.h" //get enums
 #include "../Repo/Sean_queue.h"
 
+/* Notes { // Freqiency
+	A=220,
+	B=246.94,
+	C=261.63, //Middle C
+	D=293.66,
+	E=329.63,
+	F=349.23,
+	G=392,
+};*/
+
 class Pitch_Adjust{
 private:
 	Sean_queue *q_val;
-	static uint8_t pitch_number; //max value
-	bool set_pitch_number(Sean_queue *q_cmd); //use queue and get the message to change the pitch number
+	static uint8_t octave; //max value
 
 public:
-	uint16_t pitch_to_freq(); //get the pitch number and change it to frequency
+	void set_octave(Sean_queue *q_cmd); //use queue and get the message to change the pitch number
+	uint8_t get_octave(); //get the pitch number and change it to frequency
 
 };
 

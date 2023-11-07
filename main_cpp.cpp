@@ -11,7 +11,7 @@
 #include "../Repo/Sean_queue.h"
 #include "../Repo/Pitch_Adjust.h"
 
-DAC_HandleTypeDef hdac1;
+//DAC_HandleTypeDef hdac1;
 
 Sean_queue q_ms;
 Sean_queue q_get_data_asap;
@@ -20,10 +20,10 @@ Pitch_Adjust pitch;
 
 uint32_t number;
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim17){
+/*void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim17){
 	bool cross_fingers = q_ms.enqueue(1);
 	assert(cross_fingers);   // ERROR TRAP - queue overflow!
-}
+}*/
 
 void main_cpp(){
 

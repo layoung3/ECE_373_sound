@@ -23,5 +23,18 @@ void Play_Note::update(){
 			  play_frequency[i]= (base_frequency[i]*pow(2,current_octave));
 		}
 	}
+
+	//Keypad_out_Pin set to 0 so check input for 0
+	if (HAL_GPIO_ReadPin(GPIOD,Keypad_a_Pin)==0){ //prioritize a note since there is no chord
+		HAL_DAC_SetValue(&hdac1,DAC_CHANNEL_2,DAC_ALIGN_12B_L,play_frequency[0]);
+	}
+	else if(HAL_GPIO_ReadPin(GPIOD,Keypad_b_Pin)==0){
+		HAL_DAC_SetValue(&hdac1,DAC_CHANNEL_2,DAC_ALIGN_12B_L,play_frequency[1]);
+	}
+	else if(HAL_GPIO_ReadPin(GPIOD,Keypad_c_Pin)==0){
+		HAL_DAC_SetValue(&hdac1,DAC_CHANNEL_2,DAC_ALIGN_12B_L,play_frequency[2]);
+	}
+	else
+		break;
 }
 

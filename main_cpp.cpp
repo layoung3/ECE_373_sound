@@ -10,6 +10,7 @@
 #include "../Repo/Sample_clock.h"
 #include "../Repo/Sean_queue.h"
 #include "../Repo/Pitch_Adjust.h"
+#include "../Repo/Play_Note.h"
 
 //DAC_HandleTypeDef hdac1;
 
@@ -17,6 +18,8 @@ Sean_queue q_ms;
 Sean_queue q_get_data_asap;
 Sean_queue q_user_command;
 Pitch_Adjust pitch;
+
+extern DAC_HandleTypeDef hdac1;
 
 uint32_t number;
 
